@@ -1,0 +1,23 @@
+<div class="card" style="width: 20rem;height: 100%;">
+    <div class="image">
+        <img [src]="pro.images[3]" class="card-img-top" alt="card-img" style=" height: 50%;">
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{pro.title}}</h5>
+        <ul class="card-text">
+            <li>{{pro.price}}</li>
+            <li>{{pro.description}}</li>
+        </ul>
+        @if(pro.stock>0)
+        {
+        <span class="badge bg-success">InStock</span>
+        }
+        @else{
+        <span class="badge bg-danger">OutStock</span>
+
+        }
+    </div>
+    <button (click)="showDetails(pro.id)" class="btn" style="background-color: rgb(132, 16, 97); color: white;">See More</button>
+
+</div>
+
